@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wyf-blog.github.io/img/logo.jpg">
 <meta property="article:published_time" content="2025-03-28T02:16:10.520Z">
-<meta property="article:modified_time" content="2025-03-28T07:28:19.077Z">
+<meta property="article:modified_time" content="2025-04-11T05:33:41.718Z">
 <meta property="article:author" content="wyf">
 <meta property="article:tag" content="多媒体技术">
 <meta property="article:tag" content="LZ编码">
@@ -20,7 +20,7 @@
   "url": "https://wyf-blog.github.io/2025/03/28/LZ%20%E7%BC%96%E7%A0%81%E5%92%8C%E8%A7%A3%E7%A0%81/",
   "image": "https://wyf-blog.github.io/img/logo.jpg",
   "datePublished": "2025-03-28T02:16:10.520Z",
-  "dateModified": "2025-03-28T07:28:19.077Z",
+  "dateModified": "2025-04-11T05:33:41.718Z",
   "author": [
     {
       "@type": "Person",
@@ -161,7 +161,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="web_bg" style="background-image: url(/img/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/banner.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">wyf 的个人博客</span></a><a class="nav-page-title" href="/"><span class="site-name">LZ 编码和解码算法</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">LZ 编码和解码算法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-28T02:16:10.520Z" title="发表于 2025-03-28 10:16:10">2025-03-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-28T07:28:19.077Z" title="更新于 2025-03-28 15:28:19">2025-03-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF/">多媒体技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1>LZ 编码和解码</h1>
+}</script><meta name="generator" content="Hexo 7.3.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="web_bg" style="background-image: url(/img/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/banner.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">wyf 的个人博客</span></a><a class="nav-page-title" href="/"><span class="site-name">LZ 编码和解码算法</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">LZ 编码和解码算法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-28T02:16:10.520Z" title="发表于 2025-03-28 10:16:10">2025-03-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-04-11T05:33:41.718Z" title="更新于 2025-04-11 13:33:41">2025-04-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF/">多媒体技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1>LZ 编码和解码</h1>
 <p>LZ编码是字典编码的一种方法，包括LZ77编码、LZ78编码和LZW编码。它将常用的符号模式存储在字典中，用其在字典中的码字作为标识符传递，对未命中内容使用缺省的编码方式（较为低效）。</p>
 <h2 id="lz77编码">LZ77编码</h2>
 <p><strong>基本方法：</strong> 字典为先前已遍历序列的末尾定长的一段序列（搜索缓冲区），机制类似于滑动窗口。</p>
@@ -198,8 +198,8 @@
 <p>为了将LZ78编码的二元组合优化成一元形式，提出LZW编码。</p>
 <p>LZW同样使用字典，但是需要先进行字典初始化，将单个信源符号按照符号顺序写入字典表（字典序号从1开始）。和LZ78不同的是，它不再输出那个未命中的字符，因为字典已被初始化，所有的单个字符必定命中，因此只需要发送字典的序号。</p>
 <p>从编码器的角度来看，编码器在每一次编码的时候只发送匹配前缀的序号，然后把匹配前缀和第一个未匹配字符结合起来构成字典的新项插入。同时注意如果当前字符串能够与字典中多个前缀匹配，我们应当选择最长的那个。</p>
-<p>从解码器的角度来看，每接收到一个索引，先按照索引从字典中取出那个字符串接到输出串的末尾，然后把它和上一个索引对应的条目组合起来构成新条目的内容插入回字典中，这里需要注意因为每一次新建条目只能增加1个字符，所以如果当前索引对应的条目包含多个字符，我们在拼接的时候只取第一个字符参与组合。</p>
-<p><strong>例题：</strong></p>
+<p>从解码器的角度来看，每接收到一个索引，先按照索引从字典中取出那个字符串接到输出串的末尾，然后把它和上一个索引对应的条目组合起来构成新条目的内容插入回字典中，这里需要注意因为每一次新建条目只能增加1个字符，所以如果当前索引对应的条目包含多个字符，我们在拼接的时候只取第一个字符参与组合，简单来说，就是每一次都要取 <strong>上一个字典条目+当前新字典条目的首字符</strong> 作为字典的新条目插入字典。</p>
+<p><strong>解码器例题：</strong></p>
 <p>某信源符号串为：1，2，4，3，5，8，1，10，11，1</p>
 <p>初始化字典为：</p>
 <table>
@@ -253,15 +253,15 @@
 </tr>
 <tr>
 <td>5</td>
-<td>ba</td>
+<td>ba(上一个是b，当前是ab，取ab首字符a，组成ba)</td>
 </tr>
 <tr>
 <td>6</td>
-<td>abc</td>
+<td>abc(上一个是ab，当前是c，相加得abc)</td>
 </tr>
 <tr>
 <td>7</td>
-<td>cb</td>
+<td>cb(上一个是c，当前是ba，取ba首字符b构成cb)</td>
 </tr>
 <tr>
 <td>8</td>
