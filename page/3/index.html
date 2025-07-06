@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>wyf 的个人博客</title><meta name="author" content="wyf"><meta name="copyright" content="wyf"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="记录生活，分享知识，记录成长">
+<meta property="og:type" content="website">
+<meta property="og:title" content="wyf 的个人博客">
+<meta property="og:url" content="https://wyf-blog.github.io/page/3/index.html">
+<meta property="og:site_name" content="wyf 的个人博客">
+<meta property="og:description" content="记录生活，分享知识，记录成长">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wyf-blog.github.io/img/logo.jpg">
+<meta property="article:author" content="wyf">
+<meta property="article:tag" content="Leetcode, Course notes, RAG, LLM, Machine Learning, Prompt Engineering">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wyf-blog.github.io/img/logo.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://wyf-blog.github.io/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wyf 的个人博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="web_bg" style="background-image: url(/img/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/background.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">wyf 的个人博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">wyf 的个人博客</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/wyf-cyber" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:wyf17326280236@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA/" title="基础数论">基础数论</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-11T05:31:14.227Z" title="发表于 2025-03-11 13:31:14">2025-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></span></div><div class="content">蓝桥杯基础数论学习笔记 目录：  素数（素数个数、最小素数，欧拉函数） 约数（约数个数公式） 幂 （快速幂） 阶乘 （阶乘的递推形式、阶乘与因数） 取模 （加减乘取模与除法取模、乘法逆元、中国剩余定理（待更新）） 异或与异或和  一、素数  素数又称质数，一个大于1且只能被1和它本身整除的数被称为素数。对素数的求解往往是解决素数和约数问题的基础。  （1）求解方法 素数的求解有试除法、埃氏筛和线性筛三种求法，其中线性筛效率最高，此处只列出线性筛代码，因为线性筛不仅效率高，还可以方便地求出每个数的最小质因数，用途更广。 注意在考试的时候尽量打表，蓝桥杯的内存限制比较宽，一般不会出现内存溢出。不要让素数的搜索占用宝贵的程序运行时间。 123456789101112131415161718# 线性筛def sieve(n):    # find out all of the prime numbers between 2 and n    prime = []    is_prime = [True]*(n+1)    for i in range(2,n+1):        if...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wyf</div><div class="author-info-description">记录生活，分享知识，记录成长</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wyf-cyber"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/wyf-cyber" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:wyf17326280236@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/21/ACM%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0-%E7%B4%A0%E6%95%B0%E4%B8%8E%E5%90%88%E6%95%B0/" title="ACM算法复习笔记——素数与合数">ACM算法复习笔记——素数与合数</a><time datetime="2025-06-21T07:52:00.154Z" title="发表于 2025-06-21 15:52:00">2025-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/21/ACM%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0-STL%E5%BA%93/" title="ACM算法复习笔记——STL库">ACM算法复习笔记——STL库</a><time datetime="2025-06-21T07:49:02.484Z" title="发表于 2025-06-21 15:49:02">2025-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/28/LZ%20%E7%BC%96%E7%A0%81%E5%92%8C%E8%A7%A3%E7%A0%81/" title="LZ 编码和解码算法">LZ 编码和解码算法</a><time datetime="2025-03-28T02:16:10.520Z" title="发表于 2025-03-28 10:16:10">2025-03-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/13/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="快速排序">快速排序</a><time datetime="2025-03-13T11:41:13.491Z" title="发表于 2025-03-13 19:41:13">2025-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/13/%E5%A0%86/" title="堆">堆</a><time datetime="2025-03-13T11:39:00.000Z" title="发表于 2025-03-13 19:39:00">2025-03-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">笔记</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">多媒体技术</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">20</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/ACM/"><span class="card-category-list-name">ACM</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/Leetcode/"><span class="card-category-list-name">Leetcode</span><span class="card-category-list-count">10</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/Leetcode/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">回溯算法</span><span class="card-category-list-count">4</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF/"><span class="card-category-list-name">蓝桥杯</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="card-category-list-name">数据结构</span><span class="card-category-list-count">3</span></a></li></ul></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9/" style="font-size: 1.1em; color: #999">快速选择</a> <a href="/tags/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">多媒体技术</a> <a href="/tags/LZ%E7%BC%96%E7%A0%81/" style="font-size: 1.1em; color: #999">LZ编码</a> <a href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" style="font-size: 1.1em; color: #999">树状数组</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">课程笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.5em; color: #99a9bf">算法</a> <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" style="font-size: 1.34em; color: #99a3b0">蓝桥杯</a> <a href="/tags/C/" style="font-size: 1.18em; color: #999ca1">C++</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/" style="font-size: 1.1em; color: #999">二分法</a> <a href="/tags/%E5%85%A8%E6%8E%92%E5%88%97%E9%97%AE%E9%A2%98/" style="font-size: 1.1em; color: #999">全排列问题</a> <a href="/tags/%E7%AC%ACk%E5%A4%A7%E5%85%83%E7%B4%A0/" style="font-size: 1.1em; color: #999">第k大元素</a> <a href="/tags/%E7%BB%84%E5%90%88%E9%97%AE%E9%A2%98/" style="font-size: 1.1em; color: #999">组合问题</a> <a href="/tags/STL%E5%BA%93/" style="font-size: 1.1em; color: #999">STL库</a> <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C-%E5%B7%AE%E5%88%86/" style="font-size: 1.1em; color: #999">前缀和&差分</a> <a href="/tags/ACM/" style="font-size: 1.18em; color: #999ca1">ACM</a> <a href="/tags/Leetcode/" style="font-size: 1.42em; color: #99a6b7">Leetcode</a> <a href="/tags/%E7%B4%A0%E6%95%B0%E7%AD%9B/" style="font-size: 1.1em; color: #999">素数筛</a> <a href="/tags/%E5%85%A8%E6%8E%92%E5%88%97/" style="font-size: 1.1em; color: #999">全排列</a> <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" style="font-size: 1.1em; color: #999">快速排序</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.18em; color: #999ca1">数据结构</a> <a href="/tags/%E7%B4%A0%E6%95%B0/" style="font-size: 1.1em; color: #999">素数</a> <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 1.1em; color: #999">并查集</a> <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95/" style="font-size: 1.1em; color: #999">双指针法</a> <a href="/tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 1.1em; color: #999">排序</a> <a href="/tags/%E5%AD%90%E9%9B%86%E9%97%AE%E9%A2%98/" style="font-size: 1.1em; color: #999">子集问题</a> <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" style="font-size: 1.26em; color: #999fa8">回溯算法</a> <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" style="font-size: 1.1em; color: #999">滑动窗口</a> <a href="/tags/N%E6%95%B0%E4%B9%8B%E5%92%8C/" style="font-size: 1.1em; color: #999">N数之和</a> <a href="/tags/%E5%88%87%E5%89%B2%E9%97%AE%E9%A2%98/" style="font-size: 1.1em; color: #999">切割问题</a> <a href="/tags/%E5%A0%86/" style="font-size: 1.1em; color: #999">堆</a> <a href="/tags/%E5%90%88%E6%95%B0/" style="font-size: 1.1em; color: #999">合数</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%B0%E8%AE%BA/" style="font-size: 1.1em; color: #999">基础数论</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.1em; color: #999">动态规划</a> <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" style="font-size: 1.1em; color: #999">双指针</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">19</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">21</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-07-06T15:29:38.711Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/background.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2025 By wyf</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
